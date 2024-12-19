@@ -1,0 +1,9 @@
+{
+    "grounding-dataset": {
+        "root": "/root/datasets/grounding_imgs/images/",
+        "annotation": "/root/code/InternVL/grounding_dataset_gpt.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 118418
+    }
+}
