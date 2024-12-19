@@ -1,8 +1,9 @@
 # MobileAgent
 This model is fine-tuned from InternVL2-2B for mobile GUI agent task.
 ## Task: Mobile Agent
+<img width="1001" alt="fig1" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/fig1.png" />
 The mobile agent task is a task where, given a mobile GUI screenshot and a goal to be achieved as input to the model, the model must choose the actions to take in the context of the given screenshot.
-[IMG]
+
 The model can choose an appropriate action from among 8 possible actions:
 
 1. Type: Enter a string when text input is enabled.
@@ -15,6 +16,7 @@ The model can choose an appropriate action from among 8 possible actions:
 8. Task_impossible: Indicate that it is impossible to complete the task in the current state.
 
 ## Model
+<img width="1001" alt="fig1" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/fig0.png" />
 The open-source MLLM (Multimodal Large Language Model) InternVL2-2B model has been fine-tuned.
 
 The model input is as follows:
