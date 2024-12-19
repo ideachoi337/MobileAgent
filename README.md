@@ -49,3 +49,10 @@ The training details are as follows:
 
 ## Some results
 1. Instruction:
+
+
+## Cites
+> InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks<br>
+> How Far Are We to GPT-4V? Closing the Gap to Commercial Multimodal Models with Open-Source Suites<br>
+> OS-ATLAS: A Foundation Action Model for Generalist GUI Agents<br>
+> Android in the Wild: A Large-Scale Dataset for Android Device Control<br>
