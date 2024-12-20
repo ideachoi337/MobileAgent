@@ -68,7 +68,7 @@ The training details are as follows:
 
 ## Results (Demo)
 
-**You can see high resolution demo video here: https://github.com/ideachoi337/MobileAgent/blob/main/imgs/demo.mp4**
+**You can download high resolution demo video here: https://github.com/ideachoi337/MobileAgent/blob/main/imgs/demo.mp4**
 
 Instructions in video:
 * I want to know about 'Yonsei University'.
