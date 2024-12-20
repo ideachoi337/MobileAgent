@@ -47,8 +47,15 @@ The training details are as follows:
 * learning_rate: 4e-5 with cosine scheduler and warmup
 * Time taken: 7h + 14h
 
-## Some results
-1. Instruction:
+## Results (Demo)
+Instructions in video:
+* I want to know about 'Yonsei University'.
+* Set an alarm at 6:00 PM
+* Install app: LearnUs
+
+https://github.com/ideachoi337/MobileAgent/blob/main/imgs/demo.mp4
+
+
 
 
 ## Cites
