@@ -79,6 +79,8 @@ Instructions in video:
 <img width="800" alt="alarm" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/alarm.gif" />
 <img width="800" alt="store" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/store.gif" />
 
+You can use scripts at https://github.com/ideachoi337/MobileAgent/tree/main/demo for demo.
+
 ## Cites
 > InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks<br>
 > How Far Are We to GPT-4V? Closing the Gap to Commercial Multimodal Models with Open-Source Suites<br>
