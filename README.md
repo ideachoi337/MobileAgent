@@ -1,5 +1,9 @@
 # MobileAgent
-This model is fine-tuned from InternVL2-2B for mobile GUI agent task.
+🤗 [HF_link: Download model](https://huggingface.co/ideachoi/InternVL_MobileAgent) 
+
+Multimodal Large-Language-Model for Mobile Agent.
+The model is fine-tuned from Intern2-VL-2B checkpoint.
+
 ## Task: Mobile Agent
 <img width="1001" alt="fig1" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/fig1.png" />
 The mobile agent task is a task where, given a mobile GUI screenshot and a goal to be achieved as input to the model, the model must choose the actions to take in the context of the given screenshot.
@@ -16,7 +20,7 @@ The model can choose an appropriate action from among 8 possible actions:
 8. Task_impossible: Indicate that it is impossible to complete the task in the current state.
 
 ## Model
-<img width="1001" alt="fig1" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/fig0.png" />
+<img width="1001" alt="fig2" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/fig0.png" />
 
 The open-source MLLM (Multimodal Large Language Model) InternVL2-2B model has been fine-tuned.
 
@@ -32,9 +36,17 @@ The model output for each action type is as follows:
 The coordinates to be tapped are represented in the form of bounding boxes. All coordinates are normalized between 0 and 1000.
 
 ## Datasets
-* ScreenSpot-v2 dataset: The data consists of screenshot images from PC, web, and mobile environments with instructions and coordinates of corresponding regions.
+* ScreenSpot-v2 dataset:
+  - The data consists of screenshot images from PC, web, and mobile environments with instructions and coordinates of corresponding regions.
+  - Only used for stage-1 training
 * Android-In-The-Wild dataset: 
-The dataset consists of screenshot images from an Android smartphone environment with instructions and next actions
+  - The dataset consists of screenshot images from an Android smartphone environment with instructions and next actions.
+  - Because AITW datasets are so large, only 'single' and 'general' class are used for this work.
+  - For stage-1 training, only grounding actions(click) is used and all actions are used for stage-2 training.
+
+You can download datasets here:
+* [Datasets for stage-1 training: ScreenSpot-v2 + AITW (grounding actions)](https://github.com/ideachoi337/MobileAgent/blob/main/grounding_dataset_gpt.jsonl)
+* [Datasets for stage-2 training: AITW (all actions)](https://github.com/ideachoi337/MobileAgent/blob/main/grounding_mobile_dataset_gpt.jsonl)
 
 ## Training
 > You can train model by script ```GPUS=1 PER_DEVICE_BATCH_SIZE=8 sh shell/finetune.sh```
@@ -44,12 +56,13 @@ For fine-tuning, two-stage training was used.
 * Stage 2: Trained using whole the data. This is to enhance the model's ability to choose the appropriate action for a given situation and to improve its understanding of the screenshot image. (Total 170824 data)
 
 The training details are as follows:
-* GPU: 1 RTX A6000 (48GB)
+* GPU: 1 RTX A6000 48GB (But you can inference with a 16GB GPU)
 * Batch size: 16
 * num_epoch: 1
-* LoRA Training: Freeze backbone and train LoRA layer with r=16 (visual encoder was also trained at stage 2)
+* LoRA Training: Freeze backbone and train LoRA layer with r=16 (Also train visual encoder at stage 2 with LoRA layer)
 * learning_rate: 4e-5 with cosine scheduler and warmup
 * Time taken: 7h + 14h
+<img width="800" alt="fig3" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/fig2.png" />
 
 ## Results (Demo)
 Instructions in video:
