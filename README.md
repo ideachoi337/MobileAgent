@@ -51,7 +51,7 @@ You can download datasets here:
 * [Datasets for stage-2 training: AITW (all actions)](https://github.com/ideachoi337/MobileAgent/blob/main/grounding_mobile_dataset_gpt.jsonl)
 
 ## Training
-> You can train model by script ```GPUS=1 PER_DEVICE_BATCH_SIZE=8 sh shell/finetune.sh```
+You can train model using script ```GPUS=1 PER_DEVICE_BATCH_SIZE=8 sh shell/finetune.sh```
 
 For fine-tuning, two-stage training was used.
 * Stage 1: Trained using only the data corresponding to the "Click" action. This is to ensure that the model outputs in the desired format and to develop its basic GUI understanding abilities. (Total 118418 data)
