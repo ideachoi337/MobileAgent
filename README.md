@@ -75,6 +75,7 @@ Instructions in video:
 * Set an alarm at 6:00 PM
 * Install app: LearnUs
 
+***Can handle unexpected situations, such as pop-ups!***
 <img width="800" alt="search" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/search.gif" />
 <img width="800" alt="alarm" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/alarm.gif" />
 <img width="800" alt="store" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/store.gif" />
