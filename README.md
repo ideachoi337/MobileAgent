@@ -24,6 +24,8 @@ The model can choose an appropriate action from among 8 possible actions:
 
 The open-source MLLM (Multimodal Large Language Model) InternVL2-2B model has been fine-tuned.
 
+***Model ONLY uses an image with instruction to predict next action***
+
 The model input is as follows:
 > \<image\>\nPlease provide the bounding box coordinate of the region for this instruction: \<ref\>*What time is it?*\</ref\>
 
