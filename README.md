@@ -17,6 +17,7 @@ The model can choose an appropriate action from among 8 possible actions:
 
 ## Model
 <img width="1001" alt="fig1" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/fig0.png" />
+
 The open-source MLLM (Multimodal Large Language Model) InternVL2-2B model has been fine-tuned.
 
 The model input is as follows:
@@ -36,13 +37,16 @@ The coordinates to be tapped are represented in the form of bounding boxes. All 
 The dataset consists of screenshot images from an Android smartphone environment with instructions and next actions
 
 ## Training
+> You can train model by script ```GPUS=1 PER_DEVICE_BATCH_SIZE=8 sh shell/finetune.sh```
+
 For fine-tuning, two-stage training was used.
-* Stage 1: Trained using only the data corresponding to the "Click" action. This is to ensure that the model outputs in the desired format and to develop its basic GUI understanding abilities.
-* Stage 2: Trained using whole the data. This is to enhance the model's ability to choose the appropriate action for a given situation and to improve its understanding of the screenshot image.
+* Stage 1: Trained using only the data corresponding to the "Click" action. This is to ensure that the model outputs in the desired format and to develop its basic GUI understanding abilities. (Total 118418 data)
+* Stage 2: Trained using whole the data. This is to enhance the model's ability to choose the appropriate action for a given situation and to improve its understanding of the screenshot image. (Total 170824 data)
 
 The training details are as follows:
 * GPU: 1 RTX A6000 (48GB)
 * Batch size: 16
+* num_epoch: 1
 * LoRA Training: Freeze backbone and train LoRA layer with r=16 (visual encoder was also trained at stage 2)
 * learning_rate: 4e-5 with cosine scheduler and warmup
 * Time taken: 7h + 14h
@@ -53,10 +57,11 @@ Instructions in video:
 * Set an alarm at 6:00 PM
 * Install app: LearnUs
 
-https://github.com/ideachoi337/MobileAgent/blob/main/imgs/demo.mp4
+<img width="800" alt="search" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/search.gif" />
+<img width="800" alt="alarm" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/alarm.gif" />
+<img width="800" alt="store" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/store.gif" />
 
-
-
+> You can see high resolution demo video here: https://github.com/ideachoi337/MobileAgent/blob/main/imgs/demo.mp4
 
 ## Cites
 > InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks<br>
