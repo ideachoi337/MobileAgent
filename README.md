@@ -65,6 +65,9 @@ The training details are as follows:
 <img width="800" alt="fig3" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/fig2.png" />
 
 ## Results (Demo)
+
+**You can see high resolution demo video here: https://github.com/ideachoi337/MobileAgent/blob/main/imgs/demo.mp4**
+
 Instructions in video:
 * I want to know about 'Yonsei University'.
 * Set an alarm at 6:00 PM
@@ -73,8 +76,6 @@ Instructions in video:
 <img width="800" alt="search" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/search.gif" />
 <img width="800" alt="alarm" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/alarm.gif" />
 <img width="800" alt="store" src="https://github.com/ideachoi337/MobileAgent/blob/main/imgs/store.gif" />
-
-> You can see high resolution demo video here: https://github.com/ideachoi337/MobileAgent/blob/main/imgs/demo.mp4
 
 ## Cites
 > InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks<br>
